@@ -8,13 +8,55 @@
   </head>
   <body>
     <h1>Test</h1>
-    <form id="pokedex-form">
-      <label for="pokemon-id">Pokemon id#:</label>
-      <input type="number" value="" id="pokemon-id">
-      <button type="submit" name="button">Submit</button>
-    </form>
     <div class="pokedex-template">
       <img src="images/pokedex.png" alt="">
+      <div class="display">
+        <img src="images/eevee.png" alt="">
+        <h1>Nidoking</h1>
+        <div>
+          <p>Type(s):</p>
+          <ul id="types">
+            <li>Poison</li>
+            <li>Ground</li>
+          </ul>
+        </div>
+        <div>
+          <p>Abilities:</p>
+          <ul id="abilities">
+            <li>Poison Point</li>
+            <li>Rivalry</li>
+            <li>Sheer Force</li>
+          </ul>
+        </div>
+        <div>
+          <p>Height: <span id="height">1.4</span></p>
+          <p>Weight: <span id="weight">62.0</span></p>
+        </div>
+      </div>
+      <div class="interface">
+        <form id="pokedex-form">
+          <label for="pokemon-id">Pokemon id#:</label>
+          <input type="number" value="" id="pokemon-id">
+          <button type="submit" name="button">Submit</button>
+        </form>
+        <div class="numbered-buttons">
+          <button class="numbered-button" value="1">1</button>
+          <button class="numbered-button" value="2">2</button>
+          <button class="numbered-button" value="3">3</button>
+          <button class="numbered-button" value="4">4</button>
+          <button class="numbered-button" value="5">5</button>
+          <button class="numbered-button" value="6">6</button>
+          <button class="numbered-button" value="7">7</button>
+          <button class="numbered-button" value="8">8</button>
+          <button class="numbered-button" value="9">9</button>
+          <button class="numbered-button" value="0">0</button>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-list">
+      <h3>List of Pokemon by ID number</h3>
+      <ol class="pokemonList">
+      </ol>
     </div>
   </body>
 </html>
