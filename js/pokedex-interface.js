@@ -16,6 +16,12 @@ $(document).ready(function() {
       for (i = 0; i < response.abilities.length; i++) {
         $('#abilities').append("<li>" + response.abilities[i].ability.name + "</li>");
       }
+      var strHeight = response.height.toString();
+      var resStrHeight = strHeight.substring(0,strHeight.length-1)+"."+strHeight.substring(strHeight.length-1);
+      $('#height').text(resStrHeight);
+      var strWeight = response.weight.toString();
+      var resStrWeight = strWeight.substring(0,strWeight.length-1)+"."+strWeight.substring(strWeight.length-1);
+      $('#weight').text(resStrWeight);
     }).fail(function(error) {
       console.log(error.responseJSON.message);
     });

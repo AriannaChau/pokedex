@@ -10,19 +10,18 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   // * {
   //   background-color: rgba(255, 255, 255, .5);
   // }
   h1 {
     width: 65%;
-    text-align: center;
+    align-self: center;
   }
 }
 
 
 .pokedex-template {
-  background: lightyellow;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -53,7 +52,7 @@
 }
 
 .interface {
-  background-color: thistle;
+  background-color: #00a8cf;
   height: 225px;
   width: 320px;
   border: 4px solid grey;
