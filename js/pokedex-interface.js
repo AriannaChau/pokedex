@@ -5,7 +5,17 @@ $(document).ready(function() {
     $.get('http://pokeapi.co/api/v2/pokemon/' + pokemonId + '/')
     .then(function(response) {
       console.log(response);
-      // $('.display').append('<h1>' + response.name + '</h1>');
+      $('#name').text(response.name);
+      $('#image-container').empty();
+      $('#image-container').append('<img src="' + response.sprites.front_default + '" alt="your pokemon">');
+      $('#types').empty();
+      for (i = 0; i < response.types.length; i++) {
+        $('#types').append("<li>" + response.types[i].type.name + "</li>");
+      }
+      $('#abilities').empty();
+      for (i = 0; i < response.abilities.length; i++) {
+        $('#abilities').append("<li>" + response.abilities[i].ability.name + "</li>");
+      }
     }).fail(function(error) {
       console.log(error.responseJSON.message);
     });
